@@ -8,7 +8,6 @@ app.controller('mapa_indicadores_controller', ['$scope', '$rootScope', '$http',
         /* Inicializacion de la chingaderas varias */
         $scope.state = {};
         $scope.state.indicators = {};
-
         $scope.init_map = function() {
             cartodb.createVis("map_canvas", "http://oxcarh.cartodb.com/api/v2/viz/b691f314-cab8-11e4-a0a6-0e4fddd5de28/viz.json")
                 .done(function(vis, layers) {
@@ -143,11 +142,11 @@ $(document).ready(function() {
             })
         })
     }
-loadCopis(copiscount);
-// loadcopis
-$("#loadcopis").on('click', function() {
-    copiscount++;
-    copisfrom = copiscount * 10;
     loadCopis(copiscount);
-});
+    // load more copis
+    $("#loadcopis").on('click', function() {
+        copiscount++;
+        copisfrom = copiscount * 10;
+        loadCopis(copiscount);
+    });
 });

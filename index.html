@@ -103,10 +103,12 @@
 							
 						</div>
 					</div>
-				</a>
+				
 				
 			</div>
+
 		</div>
+		</a>
 		<!-- contenido extra -->
 			<div>
 				<div class="collapse collapse-copi" id="${id}-e">
@@ -114,7 +116,7 @@
 						<div class="row">
 							<div class="col-md-6">
 								<div class="panel copi copi-learn copi-mini copi-mini-left">
-									<div class="panel-body">
+									<div class="panel-body clickdiv" onclick="learnclick()">
 										<div class="row">
 											<div class="col-md-4">
 												<div class="copi-left">
@@ -132,7 +134,7 @@
 
 							<div class="col-md-6">
 								<div class="panel copi copi-change copi-mini copi-mini-right">
-								<div class="panel-body">
+								<div class="panel-body clickdiv" onclick="changeclick()">
 									<div class="row">
 										<div class="col-md-7">
 											<p  id="copi-min-r-${id}"></p>
@@ -266,5 +268,15 @@
 	</div>
 	<div class="space"></div>
 </div>
+<script>
+   // click learnclick
+    function learnclick(){
+        alert("carga copis learn");
+    }
+    // click changelick
+    function  changeclick(){
+        alert("carga copis change");
+    }
+</script>
 </body>
 </html>
