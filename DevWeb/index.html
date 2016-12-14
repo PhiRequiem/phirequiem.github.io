@@ -33,34 +33,37 @@
         <h4 class="modal-title" id="myModalLabel">¿Tienes una idea?... platiquemos!!</h4>
       </div>
       <div class="modal-body">
-        <form id="form1" name="form1" accept-charset="UTF-8" autocomplete="off" method="post" target="_blank" action="http://seg-digital.com/contacto_phi.php">
-        <div class="form-group">
-            <div class="row">
-              <div class="col-xs-6">
-                <input id="Field1" name="Field1" type="text" class="form-control" maxlength="255" tabindex="1" required placeholder="¿Como te Llamas?"/>
-              </div>
-              <div class="col-xs-6">
-                <input id="Field3" name="Field3" type="email" spellcheck="false" class="form-control" value="" maxlength="255" tabindex="2" placeholder="¿Cual es tu email?" required/>
-              </div>
-            </div>
-        </div>
+      <div id="alertaform"></div>
+        <div id="contmodal">
+            <form id="form1" name="form1" accept-charset="UTF-8" autocomplete="off" method="post" target="_blank">
             <div class="form-group">
                 <div class="row">
-                  <div class="col-xs-12">
-                <textarea id="Field4" name="Field4" class="form-control" spellcheck="true" tabindex="3" placeholder="Deja un mensaje" required
-                       ></textarea>
-                        <input type="hidden" id="idstamp" name="idstamp" value="qTJCcIFvx/eywnxCTDYn29On0LxrmcFxvnAMNy5obAU=" />
+                  <div class="col-xs-6">
+                    <input id="Field1" name="Field1" type="text" class="form-control" maxlength="255" tabindex="1" required placeholder="¿Como te Llamas?"/>
+                  </div>
+                  <div class="col-xs-6">
+                    <input id="Field3" name="Field3" type="email" spellcheck="false" class="form-control" value="" maxlength="255" tabindex="2" placeholder="¿Cual es tu email?" required/>
                   </div>
                 </div>
             </div>
-        <div class="form-group">
-            <div class="row">
-              <div class="col-xs-12">
-                <input id="saveForm" name="saveForm" class="btn btn-success btn-lg btn-block" type="submit" value="Contactar">
-              </div>
+                <div class="form-group">
+                    <div class="row">
+                      <div class="col-xs-12">
+                    <textarea id="Field4" name="Field4" class="form-control" spellcheck="true" tabindex="3" placeholder="Deja un mensaje" required
+                           ></textarea>
+                            <input type="hidden" id="idstamp" name="idstamp" value="qTJCcIFvx/eywnxCTDYn29On0LxrmcFxvnAMNy5obAU=" />
+                      </div>
+                    </div>
+                </div>
+            <div class="form-group">
+                <div class="row">
+                  <div class="col-xs-12">
+                    <input id="saveForm" name="saveForm" class="btn btn-success btn-lg btn-block" type="submit" value="Contactar">
+                  </div>
+                </div>
             </div>
+            </form>
         </div>
-        </form>
       </div>
     </div>
   </div>
@@ -253,5 +256,36 @@
             </nav>
         </div>
     </footer>
+<script>
+$(document).ready(function(){
+    $("#form1").on("submit", function(e){
+        e.preventDefault();
+        var f = $(this);
+        var formData = new FormData(document.getElementById("form1"));
+        formData.append("dato", "valor");
+        $.ajax({
+            url: "http://seg-digital.com/contacto_phi.php",
+            type: "post",
+            dataType: "html",
+            data: formData,
+            cache: false,
+            contentType: false,
+            processData: false
+        })
+        .done(function(res){
+            $("#alertaform").html(res);
+            $("#alertaform").show();
+            $("#contmodal").hide();
+            $("#saveForm").hide();
+        });
+    });
+    $('#myModal').on('hidden.bs.modal', function (e) {
+      document.getElementById("formc").reset();
+      $("#alertaform").hide();
+        $("#contmodal").show();
+        $("#saveForm").show();
+    });
+});
+</script>
 </body>
 </html>
