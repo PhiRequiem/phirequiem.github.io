@@ -1,3 +1,4 @@
+<?php header('Access-Control-Allow-Origin: *'); ?>
 <?php
 	if ($_POST['idstamp']=="qTJCcIFvx/eywnxCTDYn29On0LxrmcFxvnAMNy5obAU=") {
 		$para      = 'blackspiral@live.com';
