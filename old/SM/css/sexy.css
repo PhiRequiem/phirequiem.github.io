@@ -1,0 +1,197 @@
+body {
+	padding-top: 70px;
+	font-family: 'Lato', sans-serif;
+}
+img {
+	max-width: 292px;
+}
+.my-container {
+	max-width: 960px;
+	margin: auto;
+}
+/*clases agregados*/
+.panel {
+	box-shadow: 0 0 7px rgba(0,0,0, 0.5);
+}
+.panel-heading h3 {
+	margin: 0;
+	padding: 0;
+}
+.copi img {
+	min-width: 100%;
+}
+.copi .panel-heading p {
+	font-size: 1.6em;
+	color: white;
+	text-shadow: 0px 0px 6px rgba(0,0,0, 0.5);
+	text-align: center;
+	margin: 0;
+}
+.clickmore i {
+	color: white;
+}
+.clickmore {
+	color: #333;
+}
+.clickmore:hover {
+	color: #333;
+}
+.copi-experience .panel-heading, .copi-experience .copi-left .copi-ico, .copi-ico-sub-experience {
+	background: #FF4D4D;
+}
+.copi-experience {
+	border-color: #FF4D4D;
+}
+.copi-experience .copi-left p, .copi-experience .copi-ref i{
+	color: #FF4D4D;
+}
+.copi-learn .panel-heading, .copi-learn .copi-left .cop, .copi-ico-sub-learn {
+	background: #3385FF;
+}
+.copi-learn {
+	border-color: #3385FF;
+}
+.copi-learn  .copi-left p, .copi-learn .copi-ref i{
+	color: #3385FF;
+}
+.copi-change .panel-heading, .copi-change .copi-left .copi-ico, .copi-ico-sub-change {
+	background: #EDBE2C;
+}
+.copi-change {
+	border-color: #EDBE2C;
+}
+.copi-change  .copi-left p, .copi-change .copi-ref i {
+	color: #EDBE2C;
+}
+.copi-left .copi-ico {
+	padding: 25px 15px;
+	font-size: 4em;
+	text-align: center;
+	min-width: 100%;
+}
+.copi-left p {
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+	margin-top: 10px;
+}
+
+.copi-ref h3 {
+	margin-top: 10px;
+	margin-bottom: 0px;
+}
+.copi-ref p {
+	margin: 0;
+}
+.copi-ref i {
+	margin-right: 12px;
+	font-size: 1.5em;
+}
+.copi-ref i:hover {
+	opacity: 0.5;
+}
+.collapse-copi {
+	margin-top: 10px;
+}
+.copi-ico-sub {
+	padding: 15px 0;
+	font-size: 2.5em !important;
+	text-align: center;
+	min-width: 100%;
+}
+.copi-mini  {
+	margin-bottom: 0px;
+}
+.copi-mini .panel-body {
+	padding: 5px;
+}
+.copi-mini-left {
+	padding-left: 0px;
+}
+.copi-mini-right {
+	float: right;
+}
+.copi-chevron-left, .copi-chevron-right {
+	font-size: 1.3em;
+	vertical-align: middle;
+}
+
+/*mapa*/
+div#map_canvas {
+	height: 400px;
+	border: 3px solid #6b5e79;
+}
+div#estado-indicadores {
+	border: 3px solid #6b5e79;
+}
+
+div#estado {
+	padding: 0px 20px 0px 15px;
+}
+
+div#estado span {
+	font-size: 2em;
+}
+
+div#estado-intro {
+	background-color: #6b5e79;
+	color: #fff;
+}
+div#estado-intro p {
+	padding: 15px;
+}
+
+div#indicadores {
+	padding: 15px;	
+}
+img.estrellitas {
+	display: inline-block;
+	height: 20px;
+}
+div.indicator-section{
+	height: 2em;		
+}
+
+div.indicator-section span{
+	width: 70%;
+	vertical-align: top;
+	font-size: 1.5em;
+	font-weight: bold;
+	margin-left: 10px;
+	color: #333;
+}
+
+div.indicator-section img {
+	width: 30%;
+}
+
+.leaflet-control-attribution {
+	display: none;
+}
+.cartodb-logo {
+	display: none !important;
+}
+.list-inline span {
+	font-weight: bold;
+}
+/*/mapa*/
+
+/*clases de ayuda*/
+.space {margin: 20px;}
+.no-padding-left {padding-left: 0px !important;}
+
+/*claes temporales*/
+.red {background:red;}
+.blue {background: blue;}
+.green {background: green;}
+
+
+
+
+.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+/*715f7c
+
+rgba(113, 95, 124);*/
+
+
+
